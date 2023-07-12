@@ -1,0 +1,162 @@
+:root{
+  --bg: #ddd;
+  --blue: #0f33ff;
+  --dark: #161616;
+  --line: #535353;
+  --text-1: #ffffff;
+  --text-2: #272727;
+}
+*{
+    font-family: consolas;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bg);
+  }
+
+/* for icons */
+.icons a {
+    text-decoration: none;
+}
+.icons{
+    width: 200px;
+    display:flex;
+    flex-direction:row;
+    padding: 10px;
+    justify-content:space-between;
+}
+.icons ion-icon {
+    color: #535353;
+    font-size: 30px;
+    padding-top: 5px;
+    transition: 0.2s ease;
+}
+.icons ion-icon:hover {
+    color: var(--dark);
+    transform: scale(1.1);
+}
+
+.headset{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--dark);
+}
+/* My name at the top of webpage */
+.navbar{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: var(--dark);
+    font-size: 32px;
+    font-weight: bolder;
+    color: var(--text-1);
+}
+/* hide minimize */
+.minimize img{
+    display: none;
+    border-radius: 50%;
+    background-color: var(--bg);
+    margin-top: 2.5px;
+    margin-left: 2.5px;
+    float: left;
+    width: 45px;
+    height: 45px;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.left-content{
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    width: 400px;
+}
+.iam{
+    display: block;
+    font-size: 20px;
+    color: #010101;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* sidenav and content */
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    width: 200px;
+    position: sticky;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: var(--dark);
+}
+  
+  
+  /* Side navigation links */
+.sidenav a {
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+  /* Change color on hover */
+.sidenav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.sidenav img{
+    margin: 100px 15px 0;
+    height: 340px;
+    width: 340px;
+    border-radius: 50%;
+    box-shadow: var(--dark) 10px 10px 300px 0px;
+}
+  
+  /* Style the content */
+.content {
+    margin-left: 0;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid red;
+}
+.about-me{
+    /* remove the extra margin for right at minimise */
+    color: var(--dark);
+    text-align: right;
+}
+.project{
+    border: 1px solid black;
+    margin: 2rem;
+    height: 200px;
+}
+
+
+
+.footer{
+    width: 100%;
+    height: 360px;
+    background-image: linear-gradient(var(--bg) white);
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
