@@ -8,15 +8,62 @@
         <meta name="description" content="Portfolio Website By Utkarsh" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="style.css">
+        <style>
+            main{
+                width: 77vw;
+            }
+            .for-time{
+                height: 400px;
+                margin-top: 90px;
+            }
+            .timelapse{
+                width: 100%;
+                background: black;
+                height: 2px;
+                margin: 20px 30px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .timelapse .vertical{
+                width: 2px;
+                height: 75px;
+                background: black;
+            }
+            .vertical .imgVertical img{
+                width: 30px;
+                height: 30px;
+                position: relative;
+                top: -40px;
+            }
+            .vertical .titleVertical{
+                position: relative;
+                top: 50px;
+            }
+            .vertical .descVertical{
+                position: relative;
+                top: 60px;
+                width: 18vw;
+            }
+
+            .text-gray{
+                color: gray;
+            }
+            .left-set{
+                position: relative;
+                top: 35px;
+                left: 35px;
+                font-size: 22px;
+            }
+        </style>
     </head>
     <body>
         <div class="headset">
             <!-- change minimise logo -->
-            <div class="minimize"><img src="sidemenu.png"></div><div class="navbar"> Utkarsh Swaroop Shrivastava</div>
+            <div class="minimize"><img src="sidemenu.png" alt="png"></div><div class="navbar"> Utkarsh Swaroop Shrivastava</div>
         </div>
 
         <div class="header">
-            <div class="left-content"><div class="iam">Aspiring Full Stack Developer</div></div>
+            <div class="left-content"><span id="element"></span></div>
             <div class="icons">
                 <a href="#" title="linkedin"><ion-icon name="logo-linkedin"></ion-icon></a>
                 <a href="#" title="instagram"><ion-icon name="logo-instagram"></ion-icon></a>
@@ -26,49 +73,117 @@
             </div>
         </div>
         
-        <div class="main">
-            <!-- main body of webpage containing sidebar and body-->
-            <div class="sidenav">
-               <a href="#">Projects</a>
-               <a href="#">My Blog</a>
-               <a href="#">Contact Me</a>
-               <a href="#">Profiles</a>
-               <img src="utkarsh.jpg" alt="UtkarshSwaroopShrivastava" />
+        <main>
+            <div class="main">
+                <!-- main body of webpage containing sidebar and body-->
+                <div class="sidenav">
+                   <a href="#">Projects</a>
+                   <a href="#">My Blog</a>
+                   <a href="#">Contact Me</a>
+                   <a href="#">Profiles</a>
+                   <img src="utkarsh.jpg" alt="UtkarshSwaroopShrivastava" />
+                </div>
+                  
+                <div class="content">
+                   <div class="about-me">
+                        <h1>About me</h1>
+                        <p><h3>NIT KURUKSHETRA</h3><h4>Pursuing <u>B.Tech</u> in <u>Computer Engineering</u><br/>First Year (2022 - 2026)</h4></p>
+                   </div>
+    
+                   <div class="project">
+    
+                   </div>
+    
+                   <div class="project">
+                        
+                   </div>
+    
+                   <div class="project">
+                        
+                   </div>
+    
+                   <div class="project">
+                        
+                   </div>
+    
+                   <div class="project">
+                        
+                   </div>
+    
+                </div>
             </div>
-              
-            <div class="content">
-               <div class="about-me">
-                    <h1>About me</h1>
-                    <p><h3>NIT KURUKSHETRA</h3><h4>Pursuing <u>B.Tech</u> in <u>Computer Engineering</u><br/>First Year (2022 - 2026)</h4></p>
-               </div>
 
-               <div class="project">
-
-               </div>
-
-               <div class="project">
+            <span class="text-gray left-set">My skill set</span>
+            <div class="for-time">
+                <div class="timelapse">
+                    <div class="vertical">
+                        <div class="imgVertical">
+                            <img src="c.png" alt="png"/>
+                        </div>
+                        <div class="titleVertical">C</div>
+                        <div class="descVertical">
+                            C is my strongest skill. I started studying C when I was in 11th standard. I have in depth knowledge of pointers and data structures in C. My journey with C wasn't easy since I was learning of my own and instead of having a beginner friendly book I started with K&R.
+                        </div>
+                    </div>
                     
-               </div>
+                    <div class="vertical">
+                        <div class="imgVertical">
+                            <img src="html.png" alt="png"/>
+                        </div>
+                        <div class="titleVertical">HTML</div>
+                        <div class="descVertical">
+                            This is the first computer language I learnt. I have a solid foundation in HTML and made many projects. This portfolio is one of them.
+                        </div>
+                    </div>
 
-               <div class="project">
-                    
-               </div>
+                    <div class="vertical">
+                        <div class="imgVertical">
+                            <img src="css.png" alt="png"/>
+                        </div>
+                        <div class="titleVertical">CSS</div>
+                        <div class="descVertical">
+                            I have started studying CSS nearly 6 months ago. I have never actually sit and decided to learn it till now. All the knowledge I have in CSS is through making various Projects. I find CSS to be very beneficial.
+                        </div>
+                    </div>
 
-               <div class="project">
-                    
-               </div>
+                    <div class="vertical">
+                        <div class="imgVertical">
+                            <img src="java.png" alt="png"/>
+                        </div>
+                        <div class="titleVertical">JAVA</div>
+                        <div class="descVertical">
+                            I am love with JAVA. This has so many functionalities than C. It looks kind of threatning for beginners but as one proceeds and try again and again, this language starts to become easier.
+                        </div>
+                    </div>
 
-               <div class="project">
-                    
-               </div>
+                    <div class="vertical">
+                        <div class="imgVertical">
+                            <img src="bash.png" alt="png"/>
+                        </div>
+                        <div class="titleVertical">BASH</div>
+                        <div class="descVertical">
+                            I have started studying BASH some weeks ago and have gained a good hand in it. I like how beautifully it works for automating tasks and data crunching. I am looking forward to learn this language more deeply and become a script-kiddie.
+                        </div>
+                    </div>
 
+                </div>
             </div>
-        </div>
-        <div class="footer"><!-- contains contact me and rest credentials -->
-            <div class="overlay"></div>
-            
-        </div>
+        </main>
+        
+        <footer>
+            <div class="footer"><!-- contains contact me and rest credentials -->
+                <div class="overlay"></div>
+                
+            </div>
+        </footer>
         
         <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <script>
+            var typed = new Typed('#element', {
+              strings: ['Aspiring FullStack Developer'],
+              typeSpeed: 100,
+            });
+          </script>
     </body>
 </html>
