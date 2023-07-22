@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Weather Forecast
+        </title>
+        <link rel="icon" type="image/x-icon" href="weather-forecast.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+                background-image: linear-gradient(to bottom, powderblue,white);
+            }
+            .weather{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                padding: 20px;
+                justify-content: space-between;
+            }
+            .heading{
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .article{
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                margin: 10px;
+                padding: 20px;
+                width: 40%;
+                text-align: center;
+                transition: transform 0.3s ease;
+            }
+            .article:hover{
+                transform: translateY(-5px);
+                transition: ease-in-out 0.3s;
+                background-color: rgb(255, 255, 255);
+                box-shadow: 0 2px 10px rgba(0, 2, 0, 0.5);
+            }
+            .temp{
+                border: 1px dotted blue;
+                border-radius: 20px;
+                padding: 30px;
+                font-size: 18px;
+                color: rgb(0, 0, 0);
+                align-self: center;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            }
+            h2{
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                text-align: center;
+                margin-top: 0;
+                font-size: 3vw;
+                color: white;
+                text-shadow: 0 0 3px #ff0000, 2px 2px 5px #01012a;
+                padding-top: 20px;
+            }
+            h1{
+                border-left: 3px dashed blue;
+                border-right: 3px dashed blue;
+                padding-top: 10px;
+                text-align: center;
+                display: block;
+                background-color: white;
+                border-radius: 30px;
+            }
+            @media screen and (max-width: 895px){
+                h2{
+                    font-size: 4vw;
+                }
+            }
+            @media screen and (max-width: 672px){
+                .article{
+                    width: 100%;
+                }
+            }
+            @media screen and (min-width: 1000px){
+                .article{
+                    width: 400px;
+                }
+                h2{
+                    font-size: 44px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1><marquee>Weather Forecast Of Next Few Days in Thanesar</marquee></h1>
+        <div id="weather" class="weather">
+
+        </div>
+        
+        <script>
+            const url2 = 'https://ai-weather-by-meteosource.p.rapidapi.com/daily?lat=29.962072&lon=76.817825&language=en&units=auto';
+            const options2 = {
+                method: 'GET',
+                headers: {
+                    'X-RapidAPI-Key': '95b1fe540amshe1d3d07543276fap174424jsn01bc3059e4b5',
+                    'X-RapidAPI-Host': 'ai-weather-by-meteosource.p.rapidapi.com'
+                }
+            };
+
+            async function fun() {
+                try {
+                  await fetch(url2, options2)
+                    .then(res => res.json())
+                    .then(data => {
+                      console.log(data);
+                      console.log(data.daily)
+                      console.log(Object.values(data.daily));
+                      Object.values(data.daily).forEach(e=>{
+                        console.log(e);
+                        Object.values(e).forEach(f=>{
+                            weather.innerHTML += `
+                            <div class="article">
+                                <h2>Date: ${f.day}</h2>
+                                <p class="heading">Weather: ${f.weather}</p>
+                                <p class="temp">Temperature: ${f.temperature}<br>Max Temperature: ${f.temperature_max}<br>Min Temerature: ${f.temperature_min}</p>
+                                <p class="alot">Cloud Cover: ${f.cloud_cover}<br>Dew Point: ${f.dew_point}<br>Dew Point Max: ${f.dew_point_max}<br>Dew Point Min: ${f.dew_point_min}</p>
+                                <p>Feels Like: ${f.feels_like}<br>Humidity: ${f.humidity}</p>
+                                <p class="summary">${f.summary}</p>
+                              </div>
+                            `;
+                        })
+                      })
+                      
+                    })
+                    .catch(err => console.log(err))
+                } catch (error) {
+                  console.error(error);
+                }
+              }
+              fun();
+        </script>
+    </body>
+</html>

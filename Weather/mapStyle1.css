@@ -1,0 +1,188 @@
+*{box-sizing: border-box;}
+@media screen and (max-width: 1295px){
+	.sideNewsbar{
+		display: none;
+		float: right;
+		width: 0%;
+	}
+}
+html{
+	scroll-behavior: smooth;
+	background-image: linear-gradient(45deg,rgb(21, 56, 126),rgb(136, 202, 222));
+	font-family: "Bodoni MT";
+}
+a{
+	color: #f1f2f4;
+}
+.body{
+	margin: 0;
+	padding: 0;
+}
+.top{
+	margin: 0;
+	padding: 20px;
+	font-size: 50px;
+	text-align: center;
+	background-image: linear-gradient(45deg,rgb(21, 56, 126),rgb(136, 202, 222));
+	color: #f2f2f3;
+	text-shadow: 2px 2px 10px rgb(56, 155, 152);
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	border-radius: 6px;
+	border: 2px solid #333;
+}
+
+.news{
+	background-color: #83c7ec;
+	color: #06080b;
+	font-size: 20px;
+	padding-top: 4px;
+	border-radius: 2px;
+}
+
+.body{
+	display: flex;
+	flex-direction: row;
+	height: auto;
+}
+.sidebar ul{
+	z-index: 10;
+	margin-top: 0px;
+	margin-right: px;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	background-color: #434b56;
+	overflow: hidden;
+	text-align: center;
+	border-radius: 3px;
+	position: fixed;
+	border-radius: 15px;
+}
+.sidebar ul li a{
+	font-size: 25px;
+	display: block;
+	text-decoration: none;
+	color: #ffffff;
+	padding: 25px;
+	margin: 0px;
+	transition: ease-in 0.7s;
+}
+.sidebar ul li a:hover{
+	transition: ease-in 0.1s;
+	background-color: #333;
+	color: #d27606;
+}
+
+
+.main{
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	margin-left: 25vh;
+}
+.world h1, .india h1, .haryana h1{
+	font-weight: lighter;
+	text-align: center;
+	margin-bottom: 0;
+	color: #ffffff;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+/*	text-shadow: 1px 1px black,-1px -1px black;*/
+}
+iframe{
+	border: none;
+	border-radius: 40px;
+	height: 720px;
+}
+
+.mySlides{display: none;}
+img{
+  vertical-align: middle;
+  min-height: 500px;
+  max-height: 700px;
+  border: none;
+  border-radius: 40px;
+}
+.slideshow-container{
+  max-width: 1000px;
+  position: relative;
+  margin: 3px;
+}
+.text{
+  color: #000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext{
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot{
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active{
+  background-color: #717171;
+}
+.fade{
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade{
+  from{opacity: .4} 
+  to{opacity: 1}
+}
+
+
+.sideNewsbar{
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	margin: 0px;
+	margin-left: 15px;
+	padding: 0px;
+	border: 1px solid powderblue;
+	border-radius: 10px;
+	box-shadow: rgba(217, 217, 215, 0.7) 0 2px 8px 0;
+}
+.headingNews{
+	color: rgb(0, 0, 0);
+	font-size: 5vh;
+}
+.newContainer{
+	font-size: 20px;
+	overflow: hidden;
+	margin: 10px 10px;
+	padding: 10px;
+	max-height: 525px;
+	border: 1px solid powderblue;
+	border-radius: 10px;
+	box-shadow: rgba(217, 217, 215, 0.7) 0px 2px 8px 0px;
+	color: #000000;
+}
+.none{
+	overflow: hidden;
+}
+.special{
+	display: none;
+}
+@media screen and (max-width: 1000px){
+	.sideNewsbar{
+		display: none;
+	}
+	.special{
+		display: block;
+	}
+}

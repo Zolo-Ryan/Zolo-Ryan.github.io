@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>News Page</title>
+  <link rel="icon" type="image/x-icon" href="weather-forecast.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: linear-gradient(45deg, rgb(135, 208, 237), rgb(51, 122, 158));
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 0 0 20px;
+      padding: 20px;
+      border: 3px solid #000;
+      border-radius: 10px;
+      text-align: center;
+      font-style: italic;
+      color: #000;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .article {
+      margin-bottom: 20px;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .article h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      color: #240f0f;
+    }
+
+    .article p {
+      margin: 0 0 10px;
+      color: #666666;
+    }
+
+    .article .author {
+      font-style: italic;
+      color: #999999;
+    }
+
+    .article .date {
+      margin-top: 10px;
+      color: #999999;
+    }
+    
+    #news {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, sans-serif;
+      font-weight: 700;
+      text-decoration: none;
+      color: #000;
+    }
+    
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 20px;
+        padding: 10px;
+      }
+
+      .article h2 {
+        font-size: 20px;
+      }
+
+      .article p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>
+      <marquee>Latest News Around the World</marquee>
+    </h1>
+    <div id="news"></div>
+  </div>
+</body>
+
+<script>
+  const url = 'https://weather338.p.rapidapi.com/news/list?offset=0&limit=10';
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': 'f2bdf6b774msh125a716390f4fe1p17500cjsn5f28fc339bf6',
+      'X-RapidAPI-Host': 'weather338.p.rapidapi.com'
+    }
+  };
+  let news = document.getElementById('news');
+
+  async function fun() {
+    try {
+      await fetch(url, options)
+        .then(res => res.json())
+        .then(data => {
+          data.forEach(e => {
+            news.innerHTML += `
+              <div class="article">
+                <h2>${e.title}</h2>
+                <p>${e.body}</p>
+                <p class="author">${e.author}</p>
+              </div>
+              <hr>
+            `;
+          });
+        })
+        .catch(err => console.log(err))
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  fun();
+</script>
+</html>

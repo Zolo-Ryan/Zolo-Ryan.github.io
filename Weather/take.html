@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather Measures</title>
+  <link rel="icon" type="image/x-icon" href="weather-forecast.png">
+  <style>
+    /* CSS styles for the weather measures page */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: linear-gradient(45deg,rgb(191, 197, 199),rgb(65, 130, 163));
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .container >  h1 {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      text-align: center;
+      margin-top: 0;
+      font-size: 44px;
+      color: white;
+      text-shadow: 0 0 3px #ff0000, 2px 2px 5px #01012a;
+      padding-top: 20px;
+    }
+
+    .measure-card {
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+
+    .measure-card h2 {
+      margin-top: 0;
+      font-size: 24px;
+      color: #333333;
+    }
+
+    .measure-card p {
+      color: #666666;
+    }
+
+    .measure-card img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: 300px;
+      width: 400px;
+      border-top-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      box-shadow: rgb(0, 0, 0) 0 2px 8px 0;
+    }
+
+    .measure-card .measure-btn {
+      display: block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .measure-card .measure-btn:hover {
+      background-color: #45a049;
+    }
+
+
+    
+.popup{
+  font-family: Arial, sans-serif;
+  width: 600px;
+  background:#fff;
+  border-radius: 6px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-size: 32px;
+  transform: translate(-50%,-50%) scale(0.8);
+  transition: transform 0.5s, top 1s;
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  border: 0.5px solid blue;
+  box-shadow: rgba(42, 32, 218, 0.686) 0 2px 8px 0;
+}
+.popup img{
+  width: 100px;
+  margin-top: 12px;
+  border-radius: 50%;
+  border: 1px solid powderblue;
+}
+.popup h2{
+  font-family: Arial, sans-serif;
+  font-size:38px;
+  font-weight: bolder;
+  margin: 30px 0 10px;
+}
+.popup button{
+  width: 100%;
+  margin-top: 30px;
+  padding: 10px 0;
+  background: #6fd649;
+  color:#fff;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+.popup ul li{
+  text-align: left;
+}
+.open-popup{
+  visibility: visible;
+  top: 50%;
+  border-radius: 20px;
+  transform: translate(-50%,-50%) scale(0.8);
+}
+
+@media screen and (max-width: 600px) {
+  .measure-card {
+    padding: 10px;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Weather Measures</h1>
+
+    <div class="measure-card">
+      <h2>Rainy Weather</h2>
+      <img src="rainy.jpg" alt="Rainy Weather">
+      <p>When it's raining, remember to carry an umbrella and wear waterproof clothing to stay dry.</p>
+      <button class="measure-btn" onclick="takeMeasure('rain');">Take Measure</button>
+    </div>
+
+    <div class="measure-card">
+      <h2>Sunny Weather</h2>
+      <img src="sunny.jpg" alt="Sunny Weather">
+      <p>On a sunny day, don't forget to apply sunscreen, wear a hat, and stay hydrated.</p>
+      <button class="measure-btn" onclick="takeMeasure('sun')">Take Measure</button>
+    </div>
+
+    <div class="measure-card">
+      <h2>Snowy Weather</h2>
+      <img src="snowy.jpg" alt="Snowy Weather">
+      <p>During snowy weather, wear warm clothing, boots, and be cautious of slippery surfaces.</p>
+      <button class="measure-btn" onclick="takeMeasure('snow')">Take Measure</button>
+    </div>
+
+    <div class="measure-card">
+      <h2>Windy Weather</h2>
+      <img src="windy.jpg" alt="Windy Weather">
+      <p>When it's windy, secure loose objects, dress in layers, and protect your eyes from blowing debris.</p>
+      <button class="measure-btn" onclick="takeMeasure('wind')">Take Measure</button>
+    </div>
+
+    <div class="measure-card">
+      <h2>Foggy Weather</h2>
+      <img src="foggy.jpg" alt="Foggy Weather">
+      <p>In foggy conditions, drive with caution, use low-beam headlights, and allow extra time for travel.</p>
+      <button class="measure-btn" onclick="takeMeasure('fog')">Take Measure</button>
+    </div>
+    
+    <div class="popup" id="popup">
+    </div>
+
+  </div>
+
+  <script>
+    function closepopup(){
+      document.getElementById("popup").style.visibility = "hidden";
+    }
+    function openpopup(){
+      popup.classList.add("open-popup");
+    }
+    // JavaScript code to handle the measure buttons
+    function takeMeasure(weather) {
+      var popup = document.getElementById("popup");
+
+      if (weather === 'rain') {
+        document.getElementById("popup").style.visibility = "visible";
+        document.getElementById("popup").innerHTML = `<img src="rain.png" id="image" />
+        <h2>Rainy Weather</h2>
+        <p><ul>
+          <li>Don’t touch electric wires</li>
+          <li>Avoid walking in the rain</li>
+          <li>Beware of bugs</li>
+          <li>Drive slowly and carefully</li>
+          <li>Unplug electronic appliances</li>
+          <li>Close windows and doors properly</li>
+          <li>Keep an umbrella and raincoat handy</li>
+          <li>Prepare an emergency kit</li>
+        </ul></p>
+        <button type="button" onclick="closepopup()">OK</button>`;
+      } else if (weather === 'sun') {
+        document.getElementById("popup").style.visibility = "visible";
+        document.getElementById("popup").innerHTML = `<img src="sunny.png" id="image" />
+        <h2>Sunny Weather</h2>
+        <p><ul>
+          <li>Get outside and stay active</li>
+          <li>Going for a walk or long-distance hike</li>
+          <li>Visiting a zoo or other outdoor recreation center</li>
+          <li>Biking along the ocean or through the forest</li>
+          <li>Sun protection</li>
+          <li>Drink plenty of water</li>
+          <li>Stay cool</li>
+          <li>Protect against bugs and insects</li>
+        </ul></p>
+        <button type="button" onclick="closepopup()">OK</button>`;
+      } else if (weather === 'snow') {
+        document.getElementById("popup").style.visibility = "visible";
+        document.getElementById("popup").innerHTML = `<img src="snowy.png" id="image" />
+        <h2>Snowy Weather</h2>
+        <p><ul>
+          <li>Install weather stripping, insulation, and storm windows</li>
+          <li>Insulate water lines that run along exterior walls</li>
+          <li>Inspect and clean fireplaces and chimneys</li>
+          <li>Have a safe alternate heating source and alternate fuels available</li>
+          <li>Prevent carbon monoxide (CO) poisoning emergencies</li>
+          <li>Service the radiator and maintain antifreeze level</li>
+          <li>Use a wintertime formula in your windshield washer</li>
+        </ul></p>
+        <button type="button" onclick="closepopup()">OK</button>`;
+      } else if (weather === 'wind') {
+        document.getElementById("popup").style.visibility = "visible";
+        document.getElementById("popup").innerHTML = `<img src="wind.png" id="image" />
+        <h2>Windy Weather</h2>
+        <p><ul>
+          <li>Stay informed</li>
+          <li>Find shelter during severe weather</li>
+          <li>If you can rent or purchase a generator, it will help keep refrigerators, freezers and lights on</li>
+          <li>Prune branches that might break off during the storm and either hurt someone or cause damage to your home or vehicles</li>
+          <li>Place garbage cans, patio furniture, grills and other potentially wind-borne objects inside your home or garage</li>
+          <li>Garage or store vehicles you plan to leave behind</li>
+        </ul></p>
+        <button type="button" onclick="closepopup()">OK</button>`;
+      } else if (weather === 'fog') {
+        document.getElementById("popup").style.visibility = "visible";
+        document.getElementById("popup").innerHTML = `<img src="fog.png" id="image" />
+        <h2>Foggy Weather</h2>
+        <p>Here are some tips to stay safe while driving through dense fog<ul>
+          <li>Set the headlights on low beam</li>
+          <li>Reduce your speed</li>
+          <li>Listen for the traffic that can’t be seen</li>
+          <li>Stick to your lane</li>
+          <li>Use your indicator</li>
+          <li>Try to keep your windows clear</li>
+        </ul></p>
+        <button type="button" onclick="closepopup()">OK</button>`;
+      }
+
+    }
+  </script>
+</body>
+</html>

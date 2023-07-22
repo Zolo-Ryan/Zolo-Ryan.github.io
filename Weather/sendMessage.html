@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sending Form</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Sttt.css">
+    </head>
+    <body>
+        <form action="https://formsubmit.co/e32238e2215ff2e5ba5062af9fc868f3" id="mainForm" method="POST">
+            <fieldset class="outer">
+                <fieldset class="middle1">
+                    <legend>Adresses:</legend>
+                    <label for="to">To:</label>
+                    <input type="email" id="to" placeholder="example@xyz.com" name="email"><br />
+                    <label for="from">From:</label>
+                    <input type="email" id="from" placeholder="example@xyz.com" name="email2" required autofocus><br />
+                    <input type="hidden" name="_next" value="thanks.html">
+                </fieldset>
+                <fieldset class="middle2">
+                    <legend>Actions:</legend>
+                    <textarea required wrap="soft" placeholder="Type your message here" rows="6" maxlength="400"></textarea>
+                    <div class="btnss">
+                       <button type="submit" value="Submit" class="btn1" name="Submit">Submit</button>
+                       <button type="reset" value="Reset" id="reset" class="btn1">Reset</button>
+                       <input type="hidden" name="_captcha" value="false">
+                       <input type="hidden" name="_autoresponse" value="Thanks For contacting us! We will respond to you shortly">
+                    </div>
+                </fieldset>
+            </fieldset>
+        </form>
+        
+        <script>
+
+        </script>
+    </body>
+</html>

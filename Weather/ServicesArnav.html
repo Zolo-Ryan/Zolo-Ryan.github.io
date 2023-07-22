@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Services</title>
+    <style>
+        *{
+            font-family: consolas;
+        }
+        .tab{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        
+        }
+        .satellite, .radar, .lightning{
+            display: block;
+            padding: 10px;
+            border: 0px solid black;
+            margin: 10px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            background-image: linear-gradient(to right, red, yellow);
+            color: white;
+            font-size: 21px;
+            transition: ease-in-out 0.3s;
+        }
+        .satellite:hover, .radar:hover, .lightning:hover{
+            cursor: pointer;
+            transition: ease-in-out 0.5s;
+            color: rgb(97, 97, 141);
+            background-image: linear-gradient(to left, red, yellow);
+        }
+        .imageTab{
+            border-radius: 10px;
+            box-shadow: rgba(34, 23, 191, 0.7) 0 2px 8px 0;
+        }
+        .imageTab > img{
+            margin-left: 25%;
+            width: 50%;
+        }
+    </style>
+    <link rel="script" href="image.js">
+</head>
+<body>
+    <div>
+        <div class="tab">
+            <div class="service satellite" onclick="funS();">Satellite</div>
+            <div class="service radar" onclick="funR();">Radar</div>
+            <div class="service lightning" onclick="funL();">Lightening</div>
+        </div>
+        <div class="imageTab">
+            <img id="myimage" src="satellite.jpg" alt="Loading">
+        </div>
+    </div>
+
+    <script>
+        function funS() {
+            document.getElementById("myimage").src = "satellite.jpg";
+        }
+
+        function funR() {
+            document.getElementById("myimage").src = "radar.jpg";
+        }
+
+        function funL() {
+            document.getElementById("myimage").src = "lighting.jpg";
+        }
+    </script>
+</body>
+</html>

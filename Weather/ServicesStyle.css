@@ -1,0 +1,181 @@
+*{
+    font-family: consolas;
+    scroll-behavior: smooth;
+}
+html{
+    background-image: linear-gradient(to bottom, blue,white);
+}
+.tab{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#headnn{
+    text-align: center;
+    background-color: powderblue;
+    box-shadow: rgba(0, 0, 0, 0.5) 4px 2px 4px 4px;
+}
+.satellite, .radar, .lightning{
+    display: block;
+    padding: 10px;
+    border: 0px solid black;
+    margin: 10px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(2, 2, 53, 0.7));
+    color: white;
+    font-size: 21px;
+    transition: ease-in-out 0.3s;
+}
+.satellite:hover, .radar:hover, .lightning:hover{
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+    color: rgb(255, 242, 0);
+    background-image: linear-gradient(to left, rgba(255,0,0,0.5), rgba(2, 2, 53,0.7));
+}
+.imageTab{
+    border-radius: 10px;
+    box-shadow: rgba(34, 23, 191, 0.7) 0 2px 8px 0;
+}
+.imageTab > img{
+    border-radius: 10px;
+    max-height: 700px;
+    width: 100%;
+}
+
+
+
+.Serve{
+    margin-top: 30px;
+}
+.heading{
+    padding-left: 20px;
+    font-size: 5vw;
+    font-weight: bolder;
+    text-align: left;
+}
+.Servicestab{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    outline-width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.about{
+    font-size: 3.5vw;
+    padding: 15px;
+}
+.Servicestab > div > img{
+    height: 8vw;
+    width: 8vw;
+    padding-left: 10px;
+    padding-top: 9px;
+}
+.Servicestab > span{
+    display: none;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.one{
+    background-color: rgba(255, 0, 0,0.5);
+}
+.two{
+    background-color: rgba(0, 0, 255,0.5);
+}
+.three{
+    background-color: rgba(0, 255, 0,0.5);
+}
+.four{
+    background-color: rgba(0, 0, 0,0.5);
+}
+.five{
+    background-color: rgba(0,0,139,0.5);
+}
+.six{
+    background-color: rgba(75,0,130,0.5);
+}
+.two:hover,.one:hover,.four:hover,.five:hover,.six:hover,.three:hover{
+    transition: ease-in-out 0.1s;
+    box-shadow: rgb(106, 7, 93) 0 2px 8px 0;
+}
+
+
+
+
+.forecast{
+    display: flex;
+    flex-direction: column;
+    outline-width: 100%;
+    margin-right: 10px;
+}
+.minimize{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.foreBlock{
+    display: block;
+    box-shadow: rgb(106, 7, 93) 0px 2px 10px 2px;
+    margin-top: 10px;
+    border-radius: 12px;
+}
+.foreBlock > span > img{
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    margin-bottom: -7px;
+}
+.text{
+    padding-bottom: 2px;
+    font-size: 26px;
+}
+.forecast > .heading{
+    margin-top: 30px ;
+    text-align: left;
+}
+@media screen and (min-width: 900px){
+    .body{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0;
+    }
+    .TabBar{
+        width: 65%;
+        min-height: 60%;
+    }
+    .Serve{
+        width: 20%;
+    }
+}
+@media screen and (min-width: 900px){
+    .Servicestab > div.about{
+        display: none;
+    }
+    .Servicestab > span{
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        padding: 10px;
+    }
+    .Servicestab{
+        flex-direction: row-reverse;
+    }
+    .Servicestab > div > img{
+        height: 40px;
+        width: 40px;
+        padding-right: 10px;
+        padding-top: 9px;
+    }
+    .heading{
+        font-size: 27px;
+        text-align: center;
+        padding: 0;
+    }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="mapStyle1.css" />
+	<title>Weather Map</title>
+</head>
+<body>
+	
+	<div class="top">
+		Weather Map
+	</div>
+
+	<marquee class="news">Loading News...</marquee>
+	<div class="body">
+		
+		<div class="sidebar">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#WORLD">World</a></li>
+				<li><a href="#INDIA">India</a></li>
+				<li><a href="#HARYANA">Haryana</a></li>
+				<li><a href="take.html">Measures</a></li>
+				<li class="special"><a href="newssss.html">News</a></li>
+			</ul>
+		</div>
+
+		<div class="main" style="font-size: 30px;">
+			
+			<div class="world" id="WORLD">
+				<h1>World Map</h1>
+				<iframe src="https://map.worldweatheronline.com/temperature?lat=56.347853757145636&lng=-4.570312500000001" loading="eager" width="100%" ></iframe>
+			</div>
+
+			<div class="india" id="INDIA">
+				<h1>India Map</h1>
+				<div class="slideshow-container">
+
+					<div class="mySlides fade">
+					  <div class="numbertext">1 / 3</div>
+					  <img src="img1.jpg" style="width:100%;" alt="none">
+					  <div class="text">Heat Map of India</div>
+					</div>
+
+					<div class="mySlides fade">
+					  <div class="numbertext">2 / 3</div>
+					  <img src="img2.jpg" style="width:100%">
+					  <div class="text">Clouds</div>
+					</div>
+
+					<div class="mySlides fade">
+					  <div class="numbertext">3 / 3</div>
+					  <img src="img3.jpg" style="width:100%">
+					  <div class="text">Heat Map</div>
+					</div>
+
+					</div>
+					<br>
+
+					<div style="text-align:center">
+					  <span class="dot"></span> 
+					  <span class="dot"></span> 
+					  <span class="dot"></span> 
+					</div>
+			</div>
+
+			<div class="haryana" id="HARYANA">
+				<h1>Haryana Map</h1>
+				<img src="tag.gif" style="width: 100%; height: 600px;"/>
+			</div>
+		</div>
+
+		<div class="sideNewsbar">
+			<center><div class="headingNews">NEWS</div></center>
+			<!-- if small window hide else show -->
+			<div class="newContainer">Since the beginning of 2022, mostly dry weather has prevailed over parts of the southern peninsula, with some episodes of light intensity showers. Kerala has recorded a mere 4 mm, while Tamil Nadu has managed to record an excess amount of precipitation at 35 mm between January 1 to February 10.
+
+Now, rains are set to revive over some parts of South India, following a brief break. As per The Weather Channel’s met team, strong northeasterly winds will bring rain with thunderstorms across the eastern coast of Tamil Nadu and southern Kerala through the weekend.</div>
+<div class="newContainer none"></div>
+			<div class="newContainer">French President Emmanuel Macron held a high-level summit to protect the world's oceans, which was attended by representatives of more than 100 countries.
+
+The One Ocean Summit in Brest brought together heads of state and government, leaders of multilateral institutions, shipping companies and civil society policymakers to unite in supporting the "Brest Commitments for the Oceans", reports Xinhua news agency.
+
+During the summit, panels were held on various commitments to marine protection and tackling climate change.
+
+Macron confirmed the summit's goal of "making commitments to bring forward useful actions and an essential international agenda for 2022".</div>
+<div class="newContainer none"></div>
+			<div class="newContainer">February has brought along with it ample rains across the Northern half of India, thanks to a seemingly never-ending stream of western disturbances (WD).
+
+On average, 4-6 WDs approach the Western Himalayan Region every month during the winter season. This season, however, has remained highly active in terms of such systems, with an estimated 25+ WDs post-monsoon since October 2021.
+
+Now, another fresh spell of rain is set to lash parts of North India, starting this Sunday, February 13. A feeble western disturbance triggers these wet conditions, but its impact would be short-lived, i.e., just 48 hours (February 13- 14).</div>
+<div class="newContainer none"></div>
+			<div class="newContainer">The world's largest igloo cafe, located in Gulmarg, Kashmir, has finally opened its doors for visitors until mid-March—the end of winter. Part of Gulmarg's renowned ski resorts, the cafe is the group’s second attempt in India, much bigger than the one built last year.
+
+The cafe's management—Kolahoi group—said that the concept of a snow cafe is incredibly popular in Switzerland, Finland and Canada. Several of them even have facilities to stay.
+
+“I thought Gulmarg sees a lot of snow, so why not start this concept here," Syed Wasim Shah, creator of the igloo, quoted as saying.</div>
+			<!-- these are blocks showing news -->
+		</div>
+	</div>
+	<script type="text/javascript">
+		let slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+		  let i;
+		  let slides = document.getElementsByClassName("mySlides");
+		  let dots = document.getElementsByClassName("dot");
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";  
+		  }
+		  slideIndex++;
+		  if (slideIndex > slides.length) {slideIndex = 1}    
+		  for (i = 0; i < dots.length; i++) {
+		    dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		  setTimeout(showSlides, 6000); // Change image every 2 seconds
+		}
+	</script>
+</body>
+</html>

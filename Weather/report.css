@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background-image: linear-gradient(rgb(84, 177, 191),rgb(254, 254, 254),rgb(55, 153, 182));
+  }
+  
+  h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    margin-top: 0;
+    font-size: 44px;
+    color: white;
+    text-shadow: 0 0 3px #ff0000, 2px 2px 5px #01012a;
+    padding-top: 20px;
+  }
+  
+  .weather-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .weather-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .weather-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .weather-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .weather-card p {
+    margin: 5px 0;
+  }
+  
+  .temperature {
+    font-size: 36px;
+    font-weight: bold;
+    color: #8a50ff;
+  }
+  
+  .forecast {
+    color: #888;
+    font-style: italic;
+  }
+  .nit{
+      background-color: #fff;
+      border: 0.5px dashed rgb(42, 27, 125);
+      border-radius: 6px;
+      margin: 20px;
+      text-align: center;
+      height: 350px;
+      font-size: large;
+  }
+  
+  

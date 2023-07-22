@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Services</title>
+    <link rel="stylesheet" type="text/css" href="ServicesStyle.css" />
+    <link rel="icon" type="image/x-icon" href="weather-forecast.png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <div class="body">
+        <div class="TabBar">
+            <div class="tab">
+                <div class="satellite" onclick=funS();>Satellite</div>
+                <div class="radar" onclick=funR();>Heat Wave</div>
+                <div class="lightning" onclick=funL();>Lightning</div>
+            </div>
+            <h2 id="headnn">Satellite</h2>
+            <div class="imageTab">
+                <img id="myimage" src="satellite.jpg" class="img" alt="Loading">
+            </div>
+        </div>
+
+        <div class="Serve">
+            <div class="heading">Government Services</div>
+            <hr />
+            <a href="https://mausam.imd.gov.in/responsive/rainfallinformation.php"><div class="Servicestab one"><div><img src="rain.png" /></div><div class="about">Rainfall Information</div><span>Rain</span></div></a>
+            <a href="https://mausam.imd.gov.in/responsive/monsooninformation.php"><div class="Servicestab two"><div><img src="keep-dry.png" /></div><div class="about">Monsoon Information</div><span>Monsoon</span></div></a>
+            <a href="https://mausam.imd.gov.in/responsive/cycloneinformation.php"><div class="Servicestab three"><div><img src="cyclone.png" /></div><div class="about">Cyclone Information</div><span>Cyclone</span></div></a>
+            <a href="https://mausam.imd.gov.in/responsive/agromet_adv_ser_state_current.php"><div class="Servicestab four"><div><img src="tractor.png" /></div><div class="about">Agromet Advisory Services</div><span>AAS</span></div></a>
+            <a href="https://imdpune.gov.in/hazardatlas/index.html" target="_blank"><div class="Servicestab five"><div><img src="bar-chart.png" /></div><div class="about">Climate Hazard & Vulnerability Atlas</div><span>CHVA</span></div></a>
+            <a href=""><div class="Servicestab six"><div><img src="airport.png" /></div><div class="about">Aviation Services</div><span>Aviation</span></div></a>
+            
+        </div>
+    </div>
+
+    <div class="forecast">
+        <div class="heading">Government Forecasts</div>
+        <hr>
+        <div class="minimize">
+            <div class="foreBlock"><span><img src="right-arrow-circular-button-outline.png"></span><a href="https://mausam.imd.gov.in/responsive/seasonal_forecast.php"><span class="text">Seasonal forecast</span></a></div>
+            <div class="foreBlock"><span><img src="right-arrow-circular-button-outline.png"></span><a href="https://internal.imd.gov.in/pages/tourism_forecast_mausam.php" target="_blank"><span class="text">Tourism Forecast</span></a></div>
+            <div class="foreBlock"><span><img src="right-arrow-circular-button-outline.png"></span><a href="https://city.imd.gov.in/citywx/crowd/enter_th_datag.php"><span class="text">Public Observation</span></a></div>
+            <div class="foreBlock"><span><img src="right-arrow-circular-button-outline.png"></span><a href="https://mausam.imd.gov.in/responsive/flashFloodBulletin.php"><span class="text">Flash Flood Bulletin</span></a></div>
+            <div class="foreBlock"><span><img src="right-arrow-circular-button-outline.png"></span><a href="https://ddgmui.imd.gov.in/dwr_img/GIS/cyclone.html"><span class="text">Cyclone Tracker</span></a></div>
+        </div>
+    </div>
+    
+    <script>
+        funs();
+        function funS() {
+            document.getElementById("myimage").src = "satellite.jpg";
+            document.getElementById("headnn").innerHTML = "Satellite";
+        }
+
+        function funR() {
+            document.getElementById("myimage").src = "radar.jpg";
+            document.getElementById("headnn").innerHTML = "Heat Wave";
+        }
+
+        function funL() {
+            document.getElementById("myimage").src = "lightning.jpg";
+            document.getElementById("headnn").innerHTML = "Lightning";
+        }
+    </script>
+</body>
+</html>

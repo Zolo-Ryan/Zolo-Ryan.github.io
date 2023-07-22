@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="aboutstyle22.css" />
+  <link rel="icon" type="image/x-icon" href="weather-forecast.png">
+</head>
+<body>
+
+<div class="about-section">
+  <h1>About Us Page</h1>
+  <div class="logoset"><p>This page contains some information about all the teammates.></p></div>
+  <p>This team was created for the purpose of creating a web project for our Second Semester</p>
+  
+</div>
+
+<div class="about-website">
+  <h1 class="heading1">Weather.lite</h1>
+  <h3 class="heading2">The World's Best Weather Site</h3>
+    <ol class="content">
+      <li>
+        <strong>Introduction: </strong>This is a weather website which is made in just one month by our team of two Developers. This website focuses on weather forecast and quick updates related to that.We are forcasting the weather updates for the whole world and you are just few clicks away to know the weather of your city. So Enjoy it!
+  </li>
+  <li>
+    <strong>Mission: </strong>We are providing the weather quickest and accurately. We are delivering reliable weather forecasts and assisting users in planning their daily activities.We want that weather should not be a problem for your daily life.So be updated with us and ready for every kind of weather.
+  </li>
+  <li>
+    <strong>Expertise: </strong>We have great expertise of our team members throught which it is all possible, that we are delivering you such good content,
+  </li>
+  <li>
+    <strong>Accurate and Reliable Forecasts: </strong> We collects our data from the most trusted sources and it is 100% reliable.WE take our data from <a class= "link" href="https://rapidapi.com/apidojo/api/weather338/">Weather.co</a>.We have a special data analyst team for taking care of the acuuracy of the data. You can also visit this.We have with us <b><u>Mr. Arihant Jain</u> </b> the data analyst head.
+  </li>
+  <li>
+    <strong>User-Focused Approach: </strong>We made this website with the main focus on user, that how can they will get maximum data from us in the most convinient way and what challenges can a user face while using our website.So we tried our best in this project.
+  </li>
+  <li>
+    <strong>Unique Features: </strong>We have map views which elegantly shows about the weather of different places at a single time. It also tells the wind direction and many more. Moreover, we provide hour-by-hour forecast and severe weather alerts.
+  </li>
+  <li>
+    <strong>Privacy and Data Security: </strong>We assure the privacy policy of our users. We take care of the security of all kinds. The data shared by our users is encrypted and no one can use it.The data of our users are 100 % safe. We never share it with any third party apps.
+  </li>
+  <li>
+    <strong>Contact us:</strong>For more information contact us on the below information provided , or directly by our developers.
+  </li>
+</ol>
+</div>
+
+
+<center><h2 style="text-align:center;">Our Team</h2></center>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="utkarsh.jpg" alt="Utkarsh">
+      <div class="container">
+        <h2>Utkarsh Swaroop</h2>
+        <p class="title">Chief Developer</p>
+        <p>From: Faridabad</p>
+        <p>E-mail: 12212037@nitkkr.ac.in</p>
+        <p><button class="button" onclick="openpopup();">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="arnab.jpg" alt="Arnab">
+      <div class="container">
+        <h2>Arunav Gawri</h2>
+        <p class="title">Designer and Developer</p>
+        <p>From: Sirsa</p>
+        <p>E-mail: 12213061@nitkkr.ac.in</p>
+        <p><button class="button" onclick="openpopup();">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="arjit.jpg" alt="Arjit">
+      <div class="container">
+        <h2>Arjit Kamboj</h2>
+        <p class="title">Designer and Developer</p>
+        <p>From: Sirsa</p>
+        <p>E-mail: 12212041@nitkkr.ac.in</p>
+        <p><button class="button" onclick="openpopup();">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="arihant.jpg" alt="Arihant">
+      <div class="container">
+        <h2>Arihant Jain</h2>
+        <p class="title">Designer and Developer</p>
+        <p>From: Bahadurgarh</p>
+        <p>E-mail: 12212033@nitkkr.ac.in</p>
+        <p><button class="button" onclick="openpopup();">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup" id="popup">
+  <form action="https://formsubmit.co/e32238e2215ff2e5ba5062af9fc868f3" method="POST" id="mainForm" autocomplete="on">
+    <fieldset class="outer">
+        <fieldset class="middle1">
+            <legend>Adresses:</legend>
+            <label for="to">To:</label>
+            <input type="email" id="to" placeholder="example@xyz.com" name="email"><br />
+            <label for="from">From:</label>
+            <input type="email" id="from" placeholder="example@xyz.com" name="email2" required autofocus><br />
+            <input type="hidden" name="_next" value="thanks.html">
+        </fieldset>
+        <fieldset class="middle2">
+            <legend>Actions:</legend>
+            <textarea required wrap="soft" placeholder="Type your message here" rows="6" maxlength="400"name="body"></textarea>
+            <div class="btnss">
+               <button type="submit" value="Submit" class="btn1">Submit</button>
+               <button type="reset" value="Reset" id="reset" class="btn1">Reset</button>
+               <button onclick="closepopup();" value="cancel" class="btn1">Cancel</button>
+               <input type="hidden" name="_captcha" value="false">
+               <input type="hidden" name="_autoresponse" value="Thanks For contacting us! We will respond to you shortly">
+            </div>
+        </fieldset>
+    </fieldset>
+</form>
+</div>
+
+<script>
+  function closepopup(){
+    document.getElementById("popup").classList.remove("open-popup");
+  }
+  function openpopup(){
+    document.getElementById("popup").classList.add("open-popup");
+  }
+</script>
+</body>
+</html>
