@@ -15,7 +15,19 @@
     <body>
         <div class="headset">
             <!-- change minimise logo -->
-            <div class="minimize hidden"><img src="sidemenu.png" alt="png"></div><div class="navbar"> Utkarsh Swaroop Shrivastava</div>
+                <div id="hamburger-icon" onclick="toggleMObileMenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    <ul class="mobile-menu">
+                        <li><a href="/">Projects</a></li>
+                        <li><a href="/">My Blog</a></li>
+                        <li><a href="/">Contact Me</a></li>
+                        <li><a href="/">Profiles</a></li>>
+                        <img src="utkarsh.jpg" alt="UtkarshSwaroopShrivastava" />
+                    </ul>
+                </div>
+            <div class="navbar"> Utkarsh Swaroop Shrivastava</div>
         </div>
 
         <div class="header">
@@ -108,7 +120,7 @@
                         </div>
                         <div class="titleVertical">JAVA</div>
                         <div class="descVertical">
-                            I am love with JAVA. This has so many functionalities than C. It looks kind of threatning for beginners but as one proceeds and try again and again, this language starts to become easier.
+                            I am in love with JAVA. This has so many functionalities than C. It looks kind of threatning for beginners but as one proceeds and try again and again, this language starts to become easier.
                         </div>
                     </div>
 
@@ -141,6 +153,9 @@
               strings: ['Aspiring FullStack Developer'],
               typeSpeed: 100,
             });
+            function toggleMObileMenu(menu){
+                menu.classList.toggle('open');
+            }
           </script>
     </body>
 </html>
