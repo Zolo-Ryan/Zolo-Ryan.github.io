@@ -1,0 +1,9 @@
+[submodule "Projects/Projects/Weather.github.io"]
+	path = Projects/Projects/Weather.github.io
+	url = https://github.com/Zolo-Ryan/Weather.github.io
+[submodule "Projects/Portfolio2"]
+	path = Projects/Portfolio2
+	url = https://github.com/Zolo-Ryan/Portfolio2
+[submodule "Projects/Weather"]
+	path = Projects/Weather
+	url = https://github.com/Zolo-Ryan/Weather
