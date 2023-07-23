@@ -10,3 +10,6 @@
 [submodule "Projects/--force"]
 	path = Projects/--force
 	url = https://github.com/Zolo-Ryan/Weather
+[submodule "Weather"]
+	path = Weather
+	url = https://github.com/Zolo-Ryan/Weather
