@@ -7,3 +7,6 @@
 [submodule "Projects/Weather"]
 	path = Projects/Weather
 	url = https://github.com/Zolo-Ryan/Weather
+[submodule "Projects/--force"]
+	path = Projects/--force
+	url = https://github.com/Zolo-Ryan/Weather
