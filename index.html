@@ -14,6 +14,7 @@
         </style>
     </head>
     <body>
+        <div id="minimizing-image" onclick="toggleMObileMenu(document.getElementById('hamburger-icon'))"></div>
         <div class="headset">
             <!-- change minimise logo -->
                 <div id="hamburger-icon" onclick="toggleMObileMenu(this)">
@@ -24,8 +25,8 @@
                         <li><a href="#PROJECTS">Projects</a></li>
                         <li><a href="http://sleepingpandaforgeeks.blogspot.com/" target="_blank">My Blog</a></li>
                         <li><a href="/">Contact Me</a></li>
-                        <li><a href="/">Profiles</a></li>>
-                        <img src="Images\utkarsh.jpg" alt="UtkarshSwaroopShrivastava" />
+                        <li><a href="/">Profiles</a></li>
+                        <img src="Images\utkarsh2.jpg" alt="UtkarshSwaroopShrivastava" />
                     </ul>
                 </div>
             <div class="navbar"> Utkarsh Swaroop Shrivastava</div>
@@ -47,16 +48,17 @@
                 <!-- main body of webpage containing sidebar and body-->
                 <div class="sidenav">
                    <a href="#PROJECTS">Projects</a>
-                   <a href="http://sleepingpandaforgeeks.blogspot.com/" target="_blank">My Blog</a>
+                   <a href="https://blogify-88v0.onrender.com" target="_blank">My Blog</a>
                    <a href="#">Contact Me</a>
                    <a href="#">Profiles</a>
-                   <img src="Images\utkarsh.jpg" alt="UtkarshSwaroopShrivastava" />
+                   <img src="Images\utkarsh2.jpg" alt="UtkarshSwaroopShrivastava" />
                 </div>
                   
                 <div class="content" id="PROJECTS">
                    <div class="about-me">
                         <h1>About me</h1>
                         <p><h3>NIT KURUKSHETRA</h3><h4>Pursuing <u>B.Tech</u> in <u>Computer Engineering</u><br/>Second Year (2022 - 2026)</h4></p>
+                        <p>I am a First year B.Tech student in National Institute of Technology Kurukshetra, pursuing Computer Science. I have a good knowledge in HTML, CSS, C. Though I am still improving them.</p>
                    </div>
     
                    <a href="Projects\Weather\index.html"><div class="project" style="
@@ -68,15 +70,15 @@
                    background: url(Images/Portfolio2Image.png); background-size: cover;">
                         <div class="overlays">My other Portfolio, this is currently under construction because it is not responsive</div>
                    </div></a>
+
+                   <a href="c:\Users\utkar\Downloads\blogify-88v0.onrender.com_.png"><div class="project" style="
+                   background: url(Images/blog.png); background-size: cover;">
+                        <div class="overlays">A fully functional blogging application created by me!</div>
+                   </div></a>
     
                    <a href="Projects\edencorpmusic\index.html"><div class="project" style="
                    background: url(Images/edenCorpmusic.png); background-size: cover;">
                         <div class="overlays">A Web page that I created for my friend for his music app</div>
-                   </div></a>
-    
-                   <a href="Projects\Weather\index.html"><div class="project" style="
-                   background: url(Images/zolo-ryan.github.io_.png); background-size: cover;">
-                        <div class="overlays">A Weather Forecast Website created by our team for showing live weather of Thanesar region and latest new around the world</div>
                    </div></a>
     
                    <a href="Projects\Weather\index.html"><div class="project" style="
@@ -160,8 +162,17 @@
               strings: ['Aspiring FullStack Developer'],
               typeSpeed: 70,
             });
+            flag = 0;
             function toggleMObileMenu(menu){
                 menu.classList.toggle('open');
+                if(flag == 1){
+                    document.getElementById('minimizing-image').style.display = 'block';
+                    flag = 0;
+                }
+                else{
+                    document.getElementById('minimizing-image').style.display = 'none';
+                    flag = 1;
+                }
             }
           </script>
     </body>

@@ -9,6 +9,7 @@
 
 * {
     font-family: consolas;
+    box-sizing: border-box;
 }
 
 html {
@@ -21,7 +22,9 @@ body {
     box-sizing: border-box;
     background-color: var(--bg);
 }
-
+#minimizing-image{
+    display: none;
+}
 /* for icons */
 .icons a {
     text-decoration: none;
@@ -133,9 +136,9 @@ body {
 }
 
 .sidenav img {
-    margin: 100px 15px 0;
-    height: 340px;
-    width: 340px;
+    margin: 150px 45px 0;
+    height: 240px;
+    width: 240px;
     border-radius: 50%;
     box-shadow: var(--dark) 10px 10px 300px 0px;
 }
@@ -184,18 +187,22 @@ body {
     top: 20px;
     left: -30px;
     height: calc(100vh - 20px);
-    width: 50vw;
+    min-width: 50vw;
     background-color: black;
     list-style-type: none;
 }
 
 .mobile-menu li {
-    margin: 10px;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
 }
 
 .mobile-menu li a {
+    display: block;
+    width: 100%;
     text-decoration: none;
-    color: gray;
+    color: #808080;
 }
 
 .mobile-menu li a:hover {
@@ -227,13 +234,15 @@ body {
     border: 1px solid black;
     margin: 2rem;
     height: 300px;
+    border-radius: 20px;
 }
 .overlays{
+    border-radius: 20px;
     visibility: hidden;
     font-size: 22px;
     color: rgb(255, 255, 255);
     outline-width: 100%;
-    padding: 0 30px;
+    padding: 10px 30px;
 }
 .project:hover .overlays{
     display: flex;
@@ -412,6 +421,23 @@ main {
     }
 
 
+    #minimizing-image{
+        display: block;
+        height: 9rem;
+        width: 9rem;
+        position: fixed;
+        z-index: 5;
+        left: 0;
+        top: 150px;
+    }
+    #minimizing-image img{
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+    }
+    #minimizing-image img:hover{
+        cursor: pointer;
+    }
     .sidenav {
         display: none;
     }
